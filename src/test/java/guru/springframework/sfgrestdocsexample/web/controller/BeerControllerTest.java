@@ -129,6 +129,7 @@ class BeerControllerTest {
             this.constraintDescriptions = new ConstraintDescriptions(input);
         }
 
+        // add in the constraint properties and exact metadata about the constraints using standard Java reflection
         private FieldDescriptor withPath(String path) {
             return fieldWithPath(path).attributes(key("constraints").value(StringUtils
                     .collectionToDelimitedString(this.constraintDescriptions
